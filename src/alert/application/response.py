@@ -5,10 +5,14 @@ class AlertResponse():
     @staticmethod
     def parsedAlertList(raw):
         listaf = []
+        print(raw)
         for row in raw:
             lista = {}
-            lista['evento'] = row[0]
-            lista['descripcion'] = row[1]
+            lista['id'] = row[0]
+            lista['evento'] = row[1]
+            lista['descripcion'] = row[2]
+            lista['placa'] = row[3]
+            lista['estado'] = row[4]
             listaf.append(lista)
         message = "Ok"
         return listaf, message

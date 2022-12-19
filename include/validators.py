@@ -10,9 +10,16 @@ def parsedRespond(data):
     }
     return jsonify(temp)
 
+def parsedRespondUser(data):
+    temp = {
+        'data': data[0],
+        'status': True
+    }
+    return jsonify(temp)
+
 def hasErrorMsg(err):
     temp = {
-        'message': "Error ejecutar su sentencia: " + str(err),
+        'message': str(err),
         'status': False
     }
 

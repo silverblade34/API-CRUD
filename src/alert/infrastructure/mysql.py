@@ -6,7 +6,7 @@ class MysqlAlert:
 
     def alertList(self):
         cursor = self.connect.cursor
-        cursor.execute( "SELECT evento, descripcion FROM tb_alerts")        
+        cursor.execute( "SELECT * FROM tb_alerts")        
         dt = cursor.fetchall()
         self.connect.conn.close()
         return dt
